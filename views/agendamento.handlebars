@@ -1,27 +1,74 @@
+<div class="min-h-screen bg-emerald-50 flex flex-col items-center justify-center px-4">
+   
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">Agende sua Consulta</h1>
 
-    <h1>Agende sua Consulta</h1>
-    <form action="/cadastrarAgendamento" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br>
+    
+    <a href="/" class="mb-6">
+        <button
+            class="py-2 px-4 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition duration-200">
+            Voltar para Home
+        </button>
+    </a>
 
-        <label for="nascimento">Data de Nascimento:</label>
-        <input type="date" id="nascimento" name="nascimento" required><br>
+    <!-- Formulário -->
+    <form action="/cadastrarAgendamento" method="POST"
+        class="w-full max-w-lg bg-white p-6 rounded-lg shadow-md space-y-4">
+        <!-- Nome -->
+        <div>
+            <label for="nome" class="block text-gray-700 font-medium">Nome:</label>
+            <input type="text" id="nome" name="nome" required
+                class="w-full border-2 border-gray-300 rounded-lg p-2 mt-1 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required><br>
+        <!-- Data de Nascimento -->
+        <div>
+            <label for="nascimento" class="block text-gray-700 font-medium">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required
+                class="w-full border-2 border-gray-300 rounded-lg p-2 mt-1 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        <!-- Telefone -->
+        <div>
+            <label for="telefone" class="block text-gray-700 font-medium">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required
+                class="w-full border-2 border-gray-300 rounded-lg p-2 mt-1 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
 
-        <label for="datahorario">Data e Hora:</label>
-        <input type="datetime-local" id="datahorario" name="datahorario" required><br>
+        <!-- Email -->
+        <div>
+            <label for="email" class="block text-gray-700 font-medium">Email:</label>
+            <input type="email" id="email" name="email" required
+                class="w-full border-2 border-gray-300 rounded-lg p-2 mt-1 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
 
-        <label for="espmedica">Especialidade Médica:</label>
-        <input type="text" id="espmedica" name="espmedica" required><br>
+        <!-- Data e Hora -->
+        <div>
+            <label for="datahorario" class="block text-gray-700 font-medium">Data e Hora:</label>
+            <input type="datetime-local" id="datahorario" name="datahorario" required
+                class="w-full border-2 border-gray-300 rounded-lg p-2 mt-1 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
 
-        <label for="causa">Causa da Consulta:</label>
-        <input type="text" id="causa" name="causa" required><br>
+        <!-- Especialidade Médica -->
+        <div>
+            <label for="espmedica" class="block text-gray-700 font-medium">Especialidade Médica:</label>
+            <input type="text" id="espmedica" name="espmedica" required
+                class="w-full border-2 border-gray-300 rounded-lg p-2 mt-1 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
 
-        <button type="submit">Agendar</button>
+        <!-- Causa da Consulta -->
+        <div>
+            <label for="causa" class="block text-gray-700 font-medium">Causa da Consulta:</label>
+            <input type="text" id="causa" name="causa" required
+                class="w-full border-2 border-gray-300 rounded-lg p-2 mt-1 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
+
+        <!-- Botão de Agendar -->
+        <div class="text-center">
+            <button type="submit"
+                class="w-full py-3 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition duration-200">
+                Agendar
+            </button>
+        </div>
     </form>
-
+    <br><br><br>
+</div>

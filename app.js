@@ -14,6 +14,7 @@ const methodOverride = require('method-override')
 //configurando o handlebars como view engine (motor de templates), e o main como layout padrão
 app.engine("handlebars", handlebars({defaultLayout: "main"}))
 app.set("view engine", "handlebars")
+app.use('/static', express.static(__dirname + '/views/layouts'))
 
 //utiliza o bodyParser para tratar dados passados por fomulários (urlencoded) e configura para receber JSONs
 app.use(bodyParser.urlencoded({extended: true}))
