@@ -1,0 +1,29 @@
+ <h1>Editar Agendamento</h1>
+
+    <form action="/editarAgendamento/{{agendamento.id}}" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="{{agendamento.nome}}" required><br>
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento" value="{{agendamento.nascimento}}" required><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" value="{{agendamento.telefone}}" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{agendamento.email}}" required><br>
+
+        <label for="datahorario">Data e Hora:</label>
+        <input type="datetime-local" id="datahorario" name="datahorario" value="{{agendamento.datahorario}}" required><br>
+
+        <label for="espmedica">Especialidade Médica:</label>
+        <input type="text" id="espmedica" name="espmedica" value="{{agendamento.espmedica}}" required><br>
+
+        <label for="causa">Causa da Consulta:</label>
+        <input type="text" id="causa" name="causa" value="{{agendamento.causa}}" required><br>
+
+        <button type="submit">Atualizar Agendamento</button>
+    </form>
+
+    <br>
+    <a href="/consultaAgendamentos">Voltar para a lista de agendamentos</a>

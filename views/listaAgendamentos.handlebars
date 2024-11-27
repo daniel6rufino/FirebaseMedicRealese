@@ -1,0 +1,40 @@
+<h1>Lista de Agendamentos</h1>
+
+    {{#if consultas.length}}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Nascimento</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Data e Hora</th>
+                <th>Especialidade Médica</th>
+                <th>Causa</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each consultas}}
+            <tr>
+                <td>{{id}}</td> <!-- Exibe o ID do agendamento -->
+                <td>{{data.nome}}</td> <!-- Exibe o nome do paciente -->
+                <td>{{data.nascimento}}</td> <!-- Exibe a data de nascimento -->
+                <td>{{data.telefone}}</td> <!-- Exibe o telefone -->
+                <td>{{data.email}}</td> <!-- Exibe o email -->
+                <td>{{data.datahorario}}</td> <!-- Exibe a data e hora do agendamento -->
+                <td>{{data.espmedica}}</td> <!-- Exibe a especialidade médica -->
+                <td>{{data.causa}}</td> <!-- Exibe a causa do agendamento -->
+                <td>
+                    <a href="/editarAgendamento/{{id}}">Editar</a> | <!-- Link para editar o agendamento -->
+                    <a href="/deletarAgendamento/{{id}}" onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</a>
+
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <p>Não há agendamentos registrados.</p>
+    {{/if}}

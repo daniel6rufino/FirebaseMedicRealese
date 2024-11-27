@@ -1,0 +1,18 @@
+
+    {{#if user}}
+        <h1>Bem-vindo, {{user.email}}!</h1>
+        <a href="/logout">Sair</a>
+    {{else}}
+        <h1>Você não está logado!</h1>
+        <a href="/login">Faça login</a>
+    {{/if}}
+
+    <!-- Botões para navegação -->
+    <div>
+        <a href="/agendamento">
+            <button>Agendar Consulta</button>
+        </a>
+        <a href="/consultaAgendamentos">
+            <button>Consultas Agendadas</button>
+        </a>
+    </div>
